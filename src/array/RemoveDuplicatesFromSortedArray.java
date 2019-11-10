@@ -9,15 +9,19 @@ package array;
  * @date 2019/11/10 16:28
  */
 public class RemoveDuplicatesFromSortedArray {
-    //快慢指针
+    /**
+     * 快慢指针，只要nums[i]==nums[j]，就增加 j 以跳过重复项。
+     * 最优解
+     * @param nums
+     * @return
+     */
     public int removeDuplicates(int[] nums) {
-        if (nums.length == 0)
-            return 0;
         int i = 0;
-        for (int j = 1; j < nums.length; j++) {
-            if (nums[i] != nums[j]) {
+        for (int j = 1;j < nums.length;j++) {
+            if(nums[i] != nums[j]){
                 i++;
-                nums[j] = nums[i];
+                //更新nums[i]的值
+                nums[i] = nums[j];
             }
         }
         return ++i;
