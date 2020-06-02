@@ -31,5 +31,6 @@ public class OyOHotelBishi {
             }
             System.out.println(str);
         }
+        in.close();
     }
 }
