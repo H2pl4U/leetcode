@@ -13,6 +13,13 @@ class Solution {
         System.out.println(findMedianSortedArrays(nums1, nums2));
     }
 
+    /**
+     * 暴力法 O(m+n) 不符合题意
+     * 合并数组,根据奇数偶数返回中位数,没使用有序性条件
+     * @param nums1
+     * @param nums2
+     * @return
+     */
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int[] arr = new int[nums1.length + nums2.length];
         int i = 0, j = 0;
