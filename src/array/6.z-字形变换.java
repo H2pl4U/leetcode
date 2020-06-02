@@ -14,6 +14,14 @@ class Solution {
         System.out.println(convert("LEETCODEISHIRING", 3));
     }
 
+    /**
+     * flag控制赋值的下标
+     * StringBuidler的List长度为numRows
+     * 遍历字符串s,通过下标轮询赋值给List对应的下标中的StringBuilder
+     * @param s
+     * @param numRows
+     * @return
+     */
     public static String convert(String s, int numRows) {
         if (numRows < 2) return s;
         List<StringBuilder> rows = new ArrayList<>();
