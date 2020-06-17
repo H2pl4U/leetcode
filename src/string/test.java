@@ -5,10 +5,12 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class test {
-    private static final String ReportID_DATE_FORMAT = "yyyyDDddHHmmss";
+    private static final String ReportID_DATE_FORMAT = "yyyyMMddHHmmss";
 
     private static final String ReportID_title = "MD-";
 
@@ -45,10 +47,21 @@ public class test {
         }
     }
 
+
     public static void main(String[] args) {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");  
-        String dateNowStr = sdf.format(new Date());
-        System.out.println(dateTimeParse(new Date().toString()).toString());
+        
+        List<String> list1 = new ArrayList<>();
+        list1.add("aaa");
+        list1.add("bbb");
+        list1.add("ccc");
+        list1.add("ddd");
+        list1.add(0,list1.remove(3));
+        list1.add(0,list1.remove(2));
+        // list1.add(0,list1.remove(1));
+        // list1.add(0,list1.remove(0));
+        for (String str : list1) {
+            System.out.println(str);
+        }
 
     }
 }
